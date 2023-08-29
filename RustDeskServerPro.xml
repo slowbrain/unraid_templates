@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RustDeskServerPro</Name>
+  <Repository>rustdesk/rustdesk-server-pro</Repository>
+  <Registry>https://hub.docker.com/r/rustdesk/rustdesk-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project>https://github.com/rustdesk/rustdesk-server</Project>
+  <Overview>Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. You have full control of your data, with no concerns about security.</Overview>
+  <Category>Tools:Utilities Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:21114]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/slowbrain/unraid_templates/master/RustDeskServerPro.xml</TemplateURL>
+  <Icon>https://github.com/slowrain/unraid_templates/raw/master/RustDesktopServerPro.png</Icon>
+  <ExtraParams>--no-healthcheck</ExtraParams>
+  <PostArgs>/usr/bin/hbbs</PostArgs>
+  <CPUset/>
+  <DateInstalled>1693344004</DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <Requires/>
+  <Config Name="Host Path 1" Target="/root" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rustdeskserverpro</Config>
+  <Config Name="TCP - RustDeskServer" Target="21114-21119" Default="" Mode="tcp" Description="Server: TCP: 21114, 21115, 21116, 21118&#13;&#10;Relay: TCP: 21117, 21119" Type="Port" Display="always" Required="false" Mask="false">21114-21119</Config>
+  <Config Name="UDP - RustDeskServer" Target="21116" Default="" Mode="udp" Description="Serverr: UDP: 21116&#13;&#10;" Type="Port" Display="always" Required="false" Mask="false">21116</Config>
+</Container>
